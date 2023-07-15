@@ -73,7 +73,7 @@ const Signup = () => {
 
         <div className='mb-4'>
           <label className='mr-2' htmlFor='password'>Password</label>
-          <input autoComplete='off' className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none' id="password" type="password" placeholder="Enter email" value={user.password} onChange={onPasswordChangeHandler} />
+          <input autoComplete='off' className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none' id="password" type="password" placeholder="Enter password" value={user.password} onChange={onPasswordChangeHandler} />
         </div>
 
         <div className='mb-4'>
