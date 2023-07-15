@@ -3,6 +3,7 @@ import User from "@/models/userModel";
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import jwt from 'jsonwebtoken';
+import { JWTPayload } from '@/helpers/interfaces'
 
 connect()
 
@@ -30,7 +31,7 @@ export async function POST(request: NextRequest) {
         }
 
         // Create jwt payload
-        const tokenPayload = {
+        const tokenPayload: JWTPayload = {
             id: user._id,
             username: user.username,
             email: user.email
@@ -43,7 +44,7 @@ export async function POST(request: NextRequest) {
         const response = NextResponse.json({
             message: "Login successfull",
             success: true
-        }, { status: 200 });
+        }, { status: 201 });
 
         response.cookies.set("token", token, {
             httpOnly: true
