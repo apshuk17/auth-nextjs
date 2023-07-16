@@ -3,3 +3,8 @@ export interface JWTPayload {
     username: String;
     email: String;
 }
+
+export enum EmailType {
+   VERIFY = 'VERIFY',
+   RESET = 'RESET'
+}
